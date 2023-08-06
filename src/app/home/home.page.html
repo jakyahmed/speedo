@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Speedometer GPS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="container">
+    <app-speedometer-analog [speed]="speed"></app-speedometer-analog>
+    <div>
+      <h2>Speedometer</h2>
+    <p *ngIf="speed !== undefined">Speed: {{ speed | number }} Km/h</p>
+    <p *ngIf="latitude !== undefined">Latitude: {{ latitude }} </p>
+    <p *ngIf="longitude !== undefined">Longitude: {{ longitude }} </p>
+    </div>
   </div>
+
 </ion-content>

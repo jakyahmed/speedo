@@ -1,5 +1,7 @@
 {
   "name": "speedo",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }
